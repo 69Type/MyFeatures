@@ -16,6 +16,5 @@ function request(url) {
 (async () => {
 
     let htmlText = await request('url'),
-        html = document.createElement('html');
 
 })()
