@@ -1,4 +1,6 @@
 
+// working strange with big strings
+
 function stringSimilarity(str1, str2, gramSize = 2) {
   function getNGrams(s, len) {
     s = ' '.repeat(len - 1) + s.toLowerCase() + ' '.repeat(len - 1);
