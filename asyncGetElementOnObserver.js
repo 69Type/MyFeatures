@@ -12,7 +12,7 @@ function asyncGetElementOnObserver(selector, timeout=-1, observeOn=document){
         observer = new MutationObserver(mutationRecords => {
             mutationRecords.forEach(record => {
                 record.addedNodes.forEach(node => {
-                    let elem = node.querySelector?.(selector) || node?.parentNode?.querySelector?.(selector);
+                    let elem = node.querySelector?.(selector) || node.parentNode?.querySelector?.(selector);
                     if (elem) {id && clearInterval(id); resolve(elem);}
                 });
             });
