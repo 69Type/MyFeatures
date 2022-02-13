@@ -1,4 +1,4 @@
-function asyncGetElementOnObserver(selector, timeout=-1, observeOn=document){
+function asyncGetElementOnObserver(selector, observeOn=document, timeout=-1){
     return new Promise((resolve, reject) => {
         const element = document.querySelector(selector);
         let id,
