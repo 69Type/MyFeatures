@@ -1,5 +1,7 @@
 function asyncGetPropertyOnIntervals(object, prop, step=0, timeout=-1){
     return new Promise(function(resolve, reject){
+        if (typeof prop !== 'string') return reject(new Error('property need to be a string type'));        
+
         const cur = object[prop];
         if (typeof cur === 'object') return reject(new Error('current value is not a primitive'));
 
