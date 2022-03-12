@@ -1,5 +1,9 @@
 let observer = new MutationObserver(mutationRecords => {
-    console.log(mutationRecords);
+    mutationRecords.forEach(record => {
+        record.addedNode.forEach(node => {
+            console.log(node);
+        });
+    });
 });
 
 observer.observe(elem, {
