@@ -1,6 +1,6 @@
 let observer = new MutationObserver(mutationRecords => {
     mutationRecords.forEach(record => {
-        record.addedNode.forEach(node => {
+        record.addedNodes.forEach(node => {
             console.log(node);
         });
     });
